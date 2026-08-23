@@ -11,7 +11,7 @@
 <body>
   <nav class="nav shell">
     <a class="brand" href="#top"><span class="brand-mark">FYR</span>FindYourReferee</a>
-    <span class="nav-note">Public plugin pending</span>
+    <span class="nav-note">Coming soon</span>
   </nav>
 
   <main class="shell" id="top">
@@ -21,67 +21,25 @@
       </button>
       <p class="eyebrow">Authorship analysis for referee reports</p>
       <h1>Who wrote this report?</h1>
-      <p class="lede">The final experience will be one click from the Plugins Directory. Manual setup is only available to eligible developer or workspace-admin accounts.</p>
+      <p class="lede">Upload a report, add possible authors, and let ChatGPT compare the evidence.</p>
     </header>
 
     <section class="setup-card status-card" aria-labelledby="setup-title">
       <div class="card-heading">
-        <span class="pill">Important</span>
-        <h2 id="setup-title">No Apps menu? Stop here.</h2>
+        <span class="pill"><i aria-hidden="true"></i> Public launch pending</span>
+        <h2 id="setup-title">One-click access is coming.</h2>
       </div>
 
-      <div class="status-message">
-        <p>You are not missing a hidden setting. Your current account or role cannot manually add this custom app.</p>
-        <p>A Codex sign-in by itself does not add an Apps section to ChatGPT Settings.</p>
-      </div>
+      <p class="status-message">FindYourReferee is not yet listed in ChatGPT's Plugins Directory. When it launches, no API key, local server, or manual setup will be needed.</p>
 
       <div class="directory-flow">
-        <span>1</span><p>Open the <strong>Plugins Directory</strong></p>
-        <span>2</span><p>Search for <strong>FindYourReferee</strong></p>
-        <span>3</span><p>Click <strong>Connect</strong></p>
+        <article><span>1</span><h3>Connect</h3><p>Find FindYourReferee in the Plugins Directory.</p></article>
+        <article><span>2</span><h3>Upload</h3><p>Add the report and your possible authors.</p></article>
+        <article><span>3</span><h3>Analyze</h3><p>Receive ranked probabilities and supporting evidence.</p></article>
       </div>
 
-      <a class="primary-button wide" href="https://chatgpt.com/plugins" target="_blank" rel="noreferrer">Open Plugins Directory <span>↗</span></a>
-      <p class="plan-note"><strong>Current status:</strong> FindYourReferee is not listed yet. OpenAI must review and approve it before this one-click route becomes available.</p>
-
-      <details class="manual">
-        <summary>Developer or workspace-admin testing only</summary>
-        <div class="manual-body">
-          <p>If your ChatGPT account does show <strong>Settings → Apps → Create</strong>, create an app named FindYourReferee, choose no authentication, and paste this endpoint:</p>
-          <div class="copy-box">
-            <code id="endpoint">https://find-referee.young-shark-2199.chatgpt.site/mcp</code>
-            <button class="copy-button" type="button" data-copy="endpoint">Copy</button>
-          </div>
-          <p>Click <strong>Scan Tools</strong>, wait for the scan, then click <strong>Create</strong>.</p>
-        </div>
-      </details>
+      <a class="primary-button wide" href="https://chatgpt.com/plugins" target="_blank" rel="noreferrer">Check the Plugins Directory <span>↗</span></a>
     </section>
-
-    <section class="use-card" aria-labelledby="use-title">
-      <div class="card-heading">
-        <span class="pill green">Every analysis</span>
-        <h2 id="use-title">Upload. Add names. Go.</h2>
-      </div>
-
-      <div class="use-grid">
-        <article><span>1</span><h3>Upload the report</h3><p>PDF, TXT, Markdown, or TeX. You may also upload the paper being reviewed.</p></article>
-        <article><span>2</span><h3>Add possible authors</h3><p>One person per line. Leave it empty if you want candidate suggestions.</p></article>
-        <article><span>3</span><h3>Start</h3><p>Paste the request below and send it.</p></article>
-      </div>
-
-      <div class="prompt-box">
-        <div>
-          <span class="prompt-label">Copy this request</span>
-          <p id="prompt">Analyze this referee report. The possible authors are: Name One, Name Two.</p>
-        </div>
-        <button class="copy-button light" type="button" data-copy="prompt">Copy</button>
-      </div>
-    </section>
-
-    <details class="more">
-      <summary>What will I get?</summary>
-      <p>A ranked probability chart, an outside-the-list probability, and a detailed evidence report covering language, recurring errors, terminology, academic fit, metadata, public writing, and uncertainty.</p>
-    </details>
   </main>
 
   <footer class="shell">
