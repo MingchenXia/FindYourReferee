@@ -3,77 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FindYourReferee prepares careful, evidence-based authorship analysis for referee reports in ChatGPT.">
-  <meta name="theme-color" content="#f5f2ea">
+  <meta name="description" content="Upload a referee report, add possible authors, and let ChatGPT compare the evidence.">
+  <meta name="theme-color" content="#f6f3eb">
   <title>FindYourReferee · Who wrote this report?</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="nav shell" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="FindYourReferee home">
-      <span class="brand-mark">FYR</span>
-      <span>FindYourReferee</span>
-    </a>
-    <a class="quiet-link" href="#how-it-works">How it works</a>
+  <nav class="nav shell">
+    <a class="brand" href="#top"><span class="brand-mark">FYR</span>FindYourReferee</a>
+    <span class="nav-note">No API key</span>
   </nav>
 
-  <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <p class="eyebrow"><span></span> Careful authorship analysis</p>
-        <h1>Who wrote<br>this report?</h1>
-        <p class="lede">Connect once, upload the referee report, add possible authors, and ask ChatGPT to compare the evidence. No API key or local server is required.</p>
-        <div class="trust-row" aria-label="Service summary">
-          <span>Uses your signed-in ChatGPT workspace</span>
-          <span>Files are not intentionally stored</span>
-        </div>
+  <main class="shell" id="top">
+    <header class="hero">
+      <button class="detective" type="button" aria-label="Animate the investigator" title="Click me">
+        <span class="hat"></span><span class="face"></span><span class="eye left"></span><span class="eye right"></span><span class="glass"></span>
+      </button>
+      <p class="eyebrow">Authorship analysis for referee reports</p>
+      <h1>Who wrote this report?</h1>
+      <p class="lede">Open ChatGPT on the web, connect once, then upload the report and type the possible authors.</p>
+    </header>
+
+    <section class="setup-card" aria-labelledby="setup-title">
+      <div class="card-heading">
+        <span class="pill">One-time setup</span>
+        <h2 id="setup-title">Connect it once</h2>
       </div>
 
-      <aside class="start-card" aria-labelledby="start-title">
-        <button class="detective" type="button" aria-label="Animate the investigator" title="Click me">
-          <span class="hat"></span><span class="face"></span><span class="eye left"></span><span class="eye right"></span><span class="glass"></span>
-        </button>
-        <p class="card-kicker">First-time setup</p>
-        <h2 id="start-title">Start here</h2>
-        <ol class="compact-steps">
-          <li>In ChatGPT, open <strong>Settings → Apps → Advanced Settings</strong> and enable Developer mode.</li>
-          <li>Create a custom app and paste the connection address below.</li>
-        </ol>
-        <div class="address-box">
-          <span class="address-label">Connection address</span>
-          <div class="address-row">
-            <code id="endpoint">https://find-referee.young-shark-2199.chatgpt.site/mcp</code>
-            <button class="copy-button" type="button" data-copy="endpoint">Copy</button>
+      <ol class="setup-list">
+        <li>
+          <span class="number">1</span>
+          <div><strong>Open ChatGPT on a computer</strong><p>Click your profile picture → Settings → Apps.</p></div>
+        </li>
+        <li>
+          <span class="number">2</span>
+          <div class="step-body">
+            <strong>Click Create</strong>
+            <p>If ChatGPT asks, enable Developer mode. If there is no Create button, your workspace administrator must allow custom apps first.</p>
           </div>
-        </div>
-        <a class="primary-action" href="https://chatgpt.com" target="_blank" rel="noreferrer">Open ChatGPT <span>↗</span></a>
-        <p class="microcopy">Custom MCP apps currently require an eligible ChatGPT workspace with custom apps enabled. Availability can depend on plan, role, workspace settings, and region.</p>
-      </aside>
-    </section>
-
-    <section class="steps shell" id="how-it-works" aria-labelledby="steps-title">
-      <div class="section-heading">
-        <p class="section-label">After setup</p>
-        <h2 id="steps-title">Three steps. That’s it.</h2>
-      </div>
-      <ol class="step-list">
-        <li><span class="step-number">1</span><div><h3>Upload the report</h3><p>Attach one or more PDF, TXT, Markdown, or TeX reports. You can also attach the manuscript being reviewed.</p></div></li>
-        <li><span class="step-number">2</span><div><h3>Add possible authors</h3><p>Enter one candidate per line. Use a slash for different name forms, or leave the list empty to request candidate discovery.</p></div></li>
-        <li><span class="step-number">3</span><div><h3>Start the analysis</h3><p>The model compares recurring errors, language, terminology, academic fit, metadata, and relevant public writing, then reports calibrated probabilities.</p></div></li>
+        </li>
+        <li>
+          <span class="number">3</span>
+          <div class="step-body">
+            <strong>Fill in the form</strong>
+            <div class="form-guide">
+              <p><span>App name</span><b>FindYourReferee</b></p>
+              <p><span>Authentication</span><b>No authentication</b></p>
+              <div class="copy-box">
+                <div><span>Server URL / endpoint</span><code id="endpoint">https://find-referee.young-shark-2199.chatgpt.site/mcp</code></div>
+                <button class="copy-button" type="button" data-copy="endpoint">Copy</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="number">4</span>
+          <div class="step-body">
+            <strong>Finish</strong>
+            <p>Click <b>Scan Tools</b>. Wait until the tools appear, then click <b>Create</b>.</p>
+            <a class="primary-button" href="https://chatgpt.com" target="_blank" rel="noreferrer">Open ChatGPT <span>↗</span></a>
+          </div>
+        </li>
       </ol>
 
-      <div class="prompt-card">
+      <p class="plan-note">Use ChatGPT on the web; custom apps are not available in the mobile app. Your plan, role, and workspace settings determine whether the Create button appears.</p>
+    </section>
+
+    <section class="use-card" aria-labelledby="use-title">
+      <div class="card-heading">
+        <span class="pill green">Every analysis</span>
+        <h2 id="use-title">Upload. Add names. Go.</h2>
+      </div>
+
+      <div class="use-grid">
+        <article><span>1</span><h3>Upload the report</h3><p>PDF, TXT, Markdown, or TeX. You may also upload the paper being reviewed.</p></article>
+        <article><span>2</span><h3>Add possible authors</h3><p>One person per line. Leave it empty if you want candidate suggestions.</p></article>
+        <article><span>3</span><h3>Start</h3><p>Paste the request below and send it.</p></article>
+      </div>
+
+      <div class="prompt-box">
         <div>
-          <p class="section-label">Example request</p>
-          <p class="prompt-text">“Analyze this referee report. The possible authors are:<br>Name One<br>Name Two”</p>
+          <span class="prompt-label">Copy this request</span>
+          <p id="prompt">Analyze this referee report. The possible authors are: Name One, Name Two.</p>
         </div>
-        <p>You may also provide private known-author samples and candidate background information. Results are evidence, not proof of identity.</p>
+        <button class="copy-button light" type="button" data-copy="prompt">Copy</button>
       </div>
     </section>
 
-    <details class="more shell">
-      <summary>What does the detailed report include?</summary>
-      <p>Candidate probabilities in descending order, an outside-the-list probability, native-language and fluency signals, recurring spelling and grammar patterns, terminology and academic-background fit, PDF metadata, low-weight TeX habits, contrary evidence, and uncertainty.</p>
+    <details class="more">
+      <summary>What will I get?</summary>
+      <p>A ranked probability chart, an outside-the-list probability, and a detailed evidence report covering language, recurring errors, terminology, academic fit, metadata, public writing, and uncertainty.</p>
     </details>
   </main>
 
