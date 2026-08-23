@@ -11,7 +11,7 @@
 <body>
   <nav class="nav shell">
     <a class="brand" href="#top"><span class="brand-mark">FYR</span>FindYourReferee</a>
-    <span class="nav-note">No API key</span>
+    <span class="nav-note">Public plugin pending</span>
   </nav>
 
   <main class="shell" id="top">
@@ -21,52 +21,40 @@
       </button>
       <p class="eyebrow">Authorship analysis for referee reports</p>
       <h1>Who wrote this report?</h1>
-      <p class="lede">Open ChatGPT on the web, connect once, then upload the report and type the possible authors.</p>
+      <p class="lede">The final experience will be one click from the Plugins Directory. Manual setup is only available to eligible developer or workspace-admin accounts.</p>
     </header>
 
-    <section class="setup-card" aria-labelledby="setup-title">
+    <section class="setup-card status-card" aria-labelledby="setup-title">
       <div class="card-heading">
-        <span class="pill">One-time setup</span>
-        <h2 id="setup-title">Connect it once</h2>
+        <span class="pill">Important</span>
+        <h2 id="setup-title">No Apps menu? Stop here.</h2>
       </div>
 
-      <ol class="setup-list">
-        <li>
-          <span class="number">1</span>
-          <div><strong>Open ChatGPT on a computer</strong><p>Click your profile picture → Settings → Apps.</p></div>
-        </li>
-        <li>
-          <span class="number">2</span>
-          <div class="step-body">
-            <strong>Click Create</strong>
-            <p>If ChatGPT asks, enable Developer mode. If there is no Create button, your workspace administrator must allow custom apps first.</p>
-          </div>
-        </li>
-        <li>
-          <span class="number">3</span>
-          <div class="step-body">
-            <strong>Fill in the form</strong>
-            <div class="form-guide">
-              <p><span>App name</span><b>FindYourReferee</b></p>
-              <p><span>Authentication</span><b>No authentication</b></p>
-              <div class="copy-box">
-                <div><span>Server URL / endpoint</span><code id="endpoint">https://find-referee.young-shark-2199.chatgpt.site/mcp</code></div>
-                <button class="copy-button" type="button" data-copy="endpoint">Copy</button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <span class="number">4</span>
-          <div class="step-body">
-            <strong>Finish</strong>
-            <p>Click <b>Scan Tools</b>. Wait until the tools appear, then click <b>Create</b>.</p>
-            <a class="primary-button" href="https://chatgpt.com" target="_blank" rel="noreferrer">Open ChatGPT <span>↗</span></a>
-          </div>
-        </li>
-      </ol>
+      <div class="status-message">
+        <p>You are not missing a hidden setting. Your current account or role cannot manually add this custom app.</p>
+        <p>A Codex sign-in by itself does not add an Apps section to ChatGPT Settings.</p>
+      </div>
 
-      <p class="plan-note">Use ChatGPT on the web; custom apps are not available in the mobile app. Your plan, role, and workspace settings determine whether the Create button appears.</p>
+      <div class="directory-flow">
+        <span>1</span><p>Open the <strong>Plugins Directory</strong></p>
+        <span>2</span><p>Search for <strong>FindYourReferee</strong></p>
+        <span>3</span><p>Click <strong>Connect</strong></p>
+      </div>
+
+      <a class="primary-button wide" href="https://chatgpt.com/plugins" target="_blank" rel="noreferrer">Open Plugins Directory <span>↗</span></a>
+      <p class="plan-note"><strong>Current status:</strong> FindYourReferee is not listed yet. OpenAI must review and approve it before this one-click route becomes available.</p>
+
+      <details class="manual">
+        <summary>Developer or workspace-admin testing only</summary>
+        <div class="manual-body">
+          <p>If your ChatGPT account does show <strong>Settings → Apps → Create</strong>, create an app named FindYourReferee, choose no authentication, and paste this endpoint:</p>
+          <div class="copy-box">
+            <code id="endpoint">https://find-referee.young-shark-2199.chatgpt.site/mcp</code>
+            <button class="copy-button" type="button" data-copy="endpoint">Copy</button>
+          </div>
+          <p>Click <strong>Scan Tools</strong>, wait for the scan, then click <strong>Create</strong>.</p>
+        </div>
+      </details>
     </section>
 
     <section class="use-card" aria-labelledby="use-title">

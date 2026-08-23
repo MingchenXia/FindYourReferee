@@ -64,6 +64,20 @@ h1 { max-width: 760px; margin: 16px 0 20px; font-size: clamp(54px, 9vw, 88px); l
 .primary-button { min-height: 46px; max-width: 300px; margin-top: 13px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; border-radius: 9px; background: var(--ink); color: white; font-size: 13px; font-weight: 700; }
 .primary-button:hover { background: #33322c; }
 .plan-note { margin: 17px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.plan-note strong { color: var(--ink); }
+.status-message { margin-top: 22px; padding: 18px; border-radius: 12px; background: #f7e9e4; border: 1px solid #ebc8bc; }
+.status-message p { margin: 0; color: #694236; font-size: 13px; line-height: 1.55; }
+.status-message p + p { margin-top: 7px; }
+.directory-flow { margin-top: 20px; display: grid; grid-template-columns: 30px 1fr; gap: 10px 12px; align-items: center; }
+.directory-flow > span { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 50%; background: var(--green); color: white; font: 750 10px/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.directory-flow p { margin: 0; font-size: 13px; }
+.primary-button.wide { max-width: none; margin-top: 20px; }
+.manual { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.manual summary { cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 700; }
+.manual-body { padding: 14px 0 0; }
+.manual-body p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.manual-body p + p { margin-top: 12px; }
+.manual-body .copy-box { margin: 12px 0; }
 
 .use-card { margin-top: 22px; }
 .use-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
